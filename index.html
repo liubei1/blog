@@ -496,20 +496,23 @@
       
         
           
-            <p>ubuntu下tensorflow的环境搭建<br>官网参考文档地址：<a href="https://www.tensorflow.org/install/，由于博主用的是ubuntu" target="_blank" rel="noopener">https://www.tensorflow.org/install/，由于博主用的是ubuntu</a> 14.04，因此以Ubuntu为例，进行说明，其他OS请参考上面给出的链接。</p>
-<p>提示：最好别用windows，后面会有很多的兼容问题</p>
+            <p>ubuntu下tensorflow的环境搭建<br>官网参考文档地址：<a href="https://www.tensorflow.org/install/" target="_blank" rel="noopener">https://www.tensorflow.org/install/</a></p>
+<p>提示：最好别用windows，会有很多的兼容问题</p>
 <p>安装的方式也有好几种，通过pip，docker,Anacodnda等，因为ubuntu是自带Python和pip的，因此这里给出的是pip的安装方式。</p>
 <p>确定python及pip的版本<br>输入命令python -V确认python的版本，需要2.7或者是3.3+</p>
 <p>输入命令pip -V或pip3 -V确认pip的版本，建议pip在8.1以上，或者是pip3，如果不是则使用sudo apt-get install python-pip python-dev进行更新。</p>
-<p>安装tensorflow<br>根据自己的情况选择以下命令之一进行安装：<br> $ pip install tensorflow      # Python 2.7; 仅支持CPU<br> $ pip3 install tensorflow     # Python 3.n; 仅支持CPU<br> $ pip install tensorflow-gpu  # Python 2.7; 支持CPU<br> $ pip3 install tensorflow-gpu # Python 3.n; 支持CPU<br>1<br>2<br>3<br>4<br>该步骤为可选步骤，如果上一步失败了，可以通过以下命令来安装：<br>$ sudo pip  install –upgrade TF_PYTHON_URL   # Python 2.7<br>$ sudo pip3 install –upgrade TF_PYTHON_URL   # Python 3.N<br>1<br>2<br>其中，TF_PYTHON_URL为TensrorFlow的python包，不通的操作系统、python版本、GPU支持状况需要选择不同的包，例如OS为Linux，python版本为3.4，仅支持CPU的情况下，TF_PYTHON_URL应当替换为 <a href="https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp34-cp34m-linux_x86_64.whl" target="_blank" rel="noopener">https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp34-cp34m-linux_x86_64.whl</a></p>
+<p>安装tensorflow<br>根据自己的情况选择以下命令之一进行安装：<br> $ pip install tensorflow      # Python 2.7; 仅支持CPU<br> $ pip3 install tensorflow     # Python 3.n; 仅支持CPU<br> $ pip install tensorflow-gpu  # Python 2.7; 支持CPU<br> $ pip3 install tensorflow-gpu # Python 3.n; 支持CPU </p>
+<p>该步骤为可选步骤，如果上一步失败了，可以通过以下命令来安装：<br>$ sudo pip  install –upgrade TF_PYTHON_URL   # Python 2.7<br>$ sudo pip3 install –upgrade TF_PYTHON_URL   # Python 3.N </p>
+<p>其中，TF_PYTHON_URL为TensrorFlow的python包，不通的操作系统、python版本、GPU支持状况需要选择不同的包<br>例如OS为Linux，python版本为3.4，仅支持CPU的情况下，TF_PYTHON_URL应当替换为 <a href="https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp34-cp34m-linux_x86_64.whl" target="_blank" rel="noopener">https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp34-cp34m-linux_x86_64.whl</a></p>
 <p>验证tensorflow是否安装成功<br>启动终端，输入python<br>输入以下代码：</p>
 <blockquote>
 <blockquote>
 <blockquote>
-<p>import tensorflow as tf<br>hello = tf.constant(‘Hello, TensorFlow!’)<br>sess = tf.Session()<br>print(sess.run(hello))<br>1<br>2<br>3<br>4<br>如果输出Hello, TensorFlow!则代表安装成功。 </p>
+<p>import tensorflow as tf<br>hello = tf.constant(‘Hello, TensorFlow!’)<br>sess = tf.Session()<br>print(sess.run(hello))</p>
 </blockquote>
 </blockquote>
 </blockquote>
+<p>如果输出Hello, TensorFlow!则代表安装成功。 </p>
 
           
         
